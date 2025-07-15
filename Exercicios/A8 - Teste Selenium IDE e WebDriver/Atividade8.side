@@ -1,0 +1,514 @@
+{
+  "id": "262a0b25-1770-4c85-bdfa-007a6858949c",
+  "version": "2.0",
+  "name": "Atividade8",
+  "url": "http://localhost:8080/home",
+  "tests": [{
+    "id": "8e55c12c-40b0-4d02-b814-cdac24a6756e",
+    "name": "05 - Pesquisar Veterinário",
+    "commands": [{
+      "id": "ea915298-3ee6-4029-8815-5de84cee77c7",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/home",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e5e4679b-49ee-4931-aac9-4c917161a673",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1080x808",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8ebc03c7-fc3b-401f-8435-35bdbf62d139",
+      "comment": "",
+      "command": "click",
+      "target": "css=a:nth-child(4) > .btn",
+      "targets": [
+        ["css=a:nth-child(4) > .btn", "css:finder"],
+        ["xpath=//a[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Consultar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "50047ab0-3072-425b-88b9-1628b2636b98",
+      "comment": "",
+      "command": "click",
+      "target": "id=nome",
+      "targets": [
+        ["id=nome", "id"],
+        ["name=nome", "name"],
+        ["css=#nome", "css:finder"],
+        ["xpath=//input[@id='nome']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "12887396-8fb0-4938-837d-0334bb423335",
+      "comment": "",
+      "command": "type",
+      "target": "id=nome",
+      "targets": [
+        ["id=nome", "id"],
+        ["name=nome", "name"],
+        ["css=#nome", "css:finder"],
+        ["xpath=//input[@id='nome']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Conceição Evaristo"
+    }, {
+      "id": "e2bfd215-0366-43e4-a4ec-c32b30f34e8f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Consultar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "31f029eb-b180-4115-8284-185616dc2f92",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=td:nth-child(2) > span",
+      "targets": [],
+      "value": "Conceição Evaristo"
+    }]
+  }, {
+    "id": "63560a99-a045-44a6-b58a-4ac16bca9949",
+    "name": "03 - Excluir Veterinário",
+    "commands": [{
+      "id": "03ffbf40-3dc4-4042-b62f-e107d7daf0d8",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/home",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e0496da3-ab08-48c0-89da-d304862c6e2a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1079x808",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a22b8c70-e830-4e7a-9b4f-b3dc4adc0cab",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=tr:nth-child(4) > td:nth-child(2) > span",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6608fe40-c9e8-4500-9e8f-e9c2c0be049f",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(4) .btn-danger > .fa",
+      "targets": [
+        ["css=tr:nth-child(4) .btn-danger > .fa", "css:finder"],
+        ["xpath=//tr[4]/td[5]/a[2]/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f32a2ace-1640-4622-84f3-de74a1f27e96",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=tr:nth-child(4) > td:nth-child(2) > span",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "3c8518aa-6d40-49f9-9e7d-50b0fbff74c5",
+    "name": "02 - Alterar Veterinário",
+    "commands": [{
+      "id": "f4ddd9a1-5c76-4e28-9b55-9c981e346bee",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/home",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "62129faf-1cd8-45ed-bbb6-5e6ad1bd2fa8",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1077x808",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "23a0e21b-99e1-40e7-86cb-1af250a960ec",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(2) > td:nth-child(2) > span",
+      "targets": [],
+      "value": "Conceição Evaristo"
+    }, {
+      "id": "459df7d7-f94e-43f1-a06d-4b8e1d714c83",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(2) > td:nth-child(3) > span",
+      "targets": [],
+      "value": "pequenos"
+    }, {
+      "id": "958e8a70-3a40-4d32-83d3-62e4a7ca76ba",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(2) > td:nth-child(4) > span",
+      "targets": [],
+      "value": "conceicao@gmail.com"
+    }, {
+      "id": "a47b6ae5-8db9-405a-a4da-a4edd2246341",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(2) > td:nth-child(5) > span",
+      "targets": [],
+      "value": "3500.00"
+    }, {
+      "id": "bc5e732f-0cb3-430f-bf74-647f447299b1",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(2) .btn-warning > .fa",
+      "targets": [
+        ["css=tr:nth-child(2) .btn-warning > .fa", "css:finder"],
+        ["xpath=//i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f0e9a143-c0d8-4e3b-b15b-538c531299ec",
+      "comment": "",
+      "command": "click",
+      "target": "id=inputSalario",
+      "targets": [
+        ["id=inputSalario", "id"],
+        ["name=salario", "name"],
+        ["css=#inputSalario", "css:finder"],
+        ["xpath=//input[@id='inputSalario']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f0cbd0da-640a-4e62-9465-378bc01ea260",
+      "comment": "",
+      "command": "mouseMoveAt",
+      "target": "id=inputSalario",
+      "targets": [
+        ["id=inputSalario", "id"],
+        ["name=salario", "name"],
+        ["css=#inputSalario", "css:finder"],
+        ["xpath=//input[@id='inputSalario']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "14.727264404296875,16.2613525390625"
+    }, {
+      "id": "d750f13c-d034-4081-af80-96fcd736d756",
+      "comment": "",
+      "command": "mouseUpAt",
+      "target": "id=inputSalario",
+      "targets": [
+        ["id=inputSalario", "id"],
+        ["name=salario", "name"],
+        ["css=#inputSalario", "css:finder"],
+        ["xpath=//input[@id='inputSalario']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "14.727264404296875,16.2613525390625"
+    }, {
+      "id": "f5d541d4-1952-45af-91d9-50ec875bba6d",
+      "comment": "",
+      "command": "click",
+      "target": "id=inputSalario",
+      "targets": [
+        ["id=inputSalario", "id"],
+        ["name=salario", "name"],
+        ["css=#inputSalario", "css:finder"],
+        ["xpath=//input[@id='inputSalario']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "11b2509a-ee3d-4327-9243-ae1a3fe0ba93",
+      "comment": "",
+      "command": "type",
+      "target": "id=inputSalario",
+      "targets": [
+        ["id=inputSalario", "id"],
+        ["name=salario", "name"],
+        ["css=#inputSalario", "css:finder"],
+        ["xpath=//input[@id='inputSalario']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "6000"
+    }, {
+      "id": "e851e41a-fd9a-4831-a8ef-ed2759244b4d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Atualizar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2cc78664-a294-4c5f-ad33-26282a900b21",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(2) > td:nth-child(5) > span",
+      "targets": [],
+      "value": "6000.00"
+    }]
+  }, {
+    "id": "56bcd6fa-d0dd-4d75-8641-8fe4fa980f9f",
+    "name": "04 - Listar Veterinário",
+    "commands": [{
+      "id": "bd7a544b-6909-42e1-96ec-3d12bce4f6f7",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/home",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "678a4809-bf12-4794-9eaf-272ab76bd0ba",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1077x808",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "68ddbec4-9a9b-4c35-a25a-968fe02536d8",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=th:nth-child(2)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b69adc7c-2d26-49b1-8778-0f6e4c157897",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=tr:nth-child(2) > td:nth-child(2) > span",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dcc17ec5-c2fa-4b83-8654-5d90e97e8718",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=tr:nth-child(3) > td:nth-child(2) > span",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7b8f6d7b-d887-4483-8a10-4456665f6e30",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=th:nth-child(2)",
+      "targets": [],
+      "value": "Nome"
+    }, {
+      "id": "e64257ec-ffe8-4df0-8c62-0530a760e8c8",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(2) > td:nth-child(2) > span",
+      "targets": [
+        ["css=tr:nth-child(2) > td:nth-child(2) > span", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'Conceição Evaristo')]", "xpath:innerText"]
+      ],
+      "value": "Conceição Evaristo"
+    }, {
+      "id": "c53a337d-ab2a-49d3-8a8e-3d3980d5158c",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(3) > td:nth-child(2) > span",
+      "targets": [
+        ["css=tr:nth-child(3) > td:nth-child(2) > span", "css:finder"],
+        ["xpath=//tr[3]/td/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Erica Queiroz Pinto')]", "xpath:innerText"]
+      ],
+      "value": "Erica Queiroz Pinto"
+    }]
+  }, {
+    "id": "cd8cf0bb-edfe-49eb-8fc5-3476e02d5904",
+    "name": "01 - Cadastrar Veterinário",
+    "commands": [{
+      "id": "e83ae544-ab09-42bb-b211-a16b2200ec7e",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/home",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "aebad961-e264-4550-abd7-5eb2d3eb5037",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1075x808",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6389226e-9828-4756-8cc5-1e3ddec2a414",
+      "comment": "",
+      "command": "click",
+      "target": "css=a:nth-child(3) > .btn",
+      "targets": [
+        ["css=a:nth-child(3) > .btn", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Adicionar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f1005e5f-c06d-41dc-a480-f5d3267dfc9a",
+      "comment": "",
+      "command": "click",
+      "target": "id=nome",
+      "targets": [
+        ["id=nome", "id"],
+        ["name=nome", "name"],
+        ["css=#nome", "css:finder"],
+        ["xpath=//input[@id='nome']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "52c6002c-702d-4a9b-aed7-8df85f314350",
+      "comment": "",
+      "command": "type",
+      "target": "id=nome",
+      "targets": [
+        ["id=nome", "id"],
+        ["name=nome", "name"],
+        ["css=#nome", "css:finder"],
+        ["xpath=//input[@id='nome']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Victor"
+    }, {
+      "id": "30794560-a990-4794-a33f-e3191cf67e93",
+      "comment": "",
+      "command": "click",
+      "target": "id=inputEmail",
+      "targets": [
+        ["id=inputEmail", "id"],
+        ["name=email", "name"],
+        ["css=#inputEmail", "css:finder"],
+        ["xpath=//input[@id='inputEmail']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3f1ae16d-f863-43d2-8996-9e83b94d6f06",
+      "comment": "",
+      "command": "type",
+      "target": "id=inputEmail",
+      "targets": [
+        ["id=inputEmail", "id"],
+        ["name=email", "name"],
+        ["css=#inputEmail", "css:finder"],
+        ["xpath=//input[@id='inputEmail']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "victorhhugo@hotmail.com"
+    }, {
+      "id": "7fd55500-2067-426f-ac98-81c84172e019",
+      "comment": "",
+      "command": "click",
+      "target": "id=inputEspecialidade",
+      "targets": [
+        ["id=inputEspecialidade", "id"],
+        ["name=especialidade", "name"],
+        ["css=#inputEspecialidade", "css:finder"],
+        ["xpath=//input[@id='inputEspecialidade']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d53b1985-1d7c-4704-9778-ef7146c0a1ad",
+      "comment": "",
+      "command": "type",
+      "target": "id=inputEspecialidade",
+      "targets": [
+        ["id=inputEspecialidade", "id"],
+        ["name=especialidade", "name"],
+        ["css=#inputEspecialidade", "css:finder"],
+        ["xpath=//input[@id='inputEspecialidade']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "grande"
+    }, {
+      "id": "35ec8776-be2e-4a0d-8420-d04f96a0b8ec",
+      "comment": "",
+      "command": "click",
+      "target": "id=inputSalario",
+      "targets": [
+        ["id=inputSalario", "id"],
+        ["name=salario", "name"],
+        ["css=#inputSalario", "css:finder"],
+        ["xpath=//input[@id='inputSalario']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e6005df6-2739-4039-82cf-ec0481b6a1b5",
+      "comment": "",
+      "command": "type",
+      "target": "id=inputSalario",
+      "targets": [
+        ["id=inputSalario", "id"],
+        ["name=salario", "name"],
+        ["css=#inputSalario", "css:finder"],
+        ["xpath=//input[@id='inputSalario']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "10000"
+    }, {
+      "id": "4237a574-ef1f-4194-9e4b-afd20bbfe6e5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Cadastrar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c5f5f698-c80c-4aba-b9bd-2944847bcdb8",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(4) > td:nth-child(2) > span",
+      "targets": [],
+      "value": "Victor"
+    }, {
+      "id": "4b94ef87-5514-4403-ae5d-452cde052b25",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(4) > td:nth-child(3) > span",
+      "targets": [],
+      "value": "grande"
+    }, {
+      "id": "9bca587c-debd-4e74-92a0-c53cb587da37",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(4) > td:nth-child(4) > span",
+      "targets": [],
+      "value": "victorhhugo@hotmail.com"
+    }, {
+      "id": "16ddf98f-2bf0-4862-a739-23db733ec516",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(4) > td:nth-child(5) > span",
+      "targets": [],
+      "value": "10000.00"
+    }]
+  }],
+  "suites": [{
+    "id": "e856c079-1181-4f2f-bda9-11fe6c451299",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["http://localhost:8080/home"],
+  "plugins": []
+}
