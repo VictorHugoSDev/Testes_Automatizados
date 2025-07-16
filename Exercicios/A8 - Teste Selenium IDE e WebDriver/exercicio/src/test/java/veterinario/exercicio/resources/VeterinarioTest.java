@@ -1,6 +1,7 @@
 package veterinario.exercicio.resources;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.junit.jupiter.api.AfterAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -162,7 +163,7 @@ public class VeterinarioTest {
 
         // Teste: 05 - Pesquisar Veterinário
         @Test
-        @Order(4) // Ordem: Consultar
+        @Order(5) // Ordem: Consultar
         public void test05PesquisarVeterinario() {
                 // Define o tamanho da janela do navegador
                 driver.manage().window().setSize(new Dimension(1080, 808));
@@ -186,25 +187,25 @@ public class VeterinarioTest {
 
         // Teste: 04 - Listar Veterinário
         @Test
-        @Order(5)
+        @Order(4)
         public void test04ListarVeterinario() {
                 driver.manage().window().setSize(new Dimension(1077, 808));
 
                 wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("th:nth-child(2)")));
+
                 assertTrue(driver.findElements(By.cssSelector("th:nth-child(2)")).size() > 0,
                                 "Cabeçalho 'Nome' deve estar presente.");
-                assertTrue(driver.findElements(By.cssSelector("tr:nth-child(2) > td:nth-child(2) > span")).size() > 0,
-                                "Primeiro veterinário na lista deve estar presente.");
-                assertTrue(driver.findElements(By.cssSelector("tr:nth-child(3) > td:nth-child(2) > span")).size() > 0,
-                                "Segundo veterinário na lista deve estar presente.");
+
+                // Aguarde o segundo veterinário especificamente
+                wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(
+                                By.cssSelector("td:nth-child(2) > span"), 1));
+
+                List<WebElement> nomes = driver.findElements(By.cssSelector("td:nth-child(2) > span"));
+                assertTrue(nomes.size() >= 2, "Devem haver pelo menos dois veterinários na lista.");
 
                 assertEquals("Nome", driver.findElement(By.cssSelector("th:nth-child(2)")).getText());
-                assertEquals("Conceição Evaristo",
-                                driver.findElement(By.cssSelector("tr:nth-child(2) > td:nth-child(2) > span"))
-                                                .getText());
-                assertEquals("Erica Queiroz Pinto",
-                                driver.findElement(By.cssSelector("tr:nth-child(3) > td:nth-child(2) > span"))
-                                                .getText());
+                assertEquals("Conceição Evaristo", nomes.get(0).getText());
+                assertEquals("Erica Queiroz Pinto", nomes.get(1).getText());
         }
 
         @AfterAll
@@ -213,5 +214,4 @@ public class VeterinarioTest {
                         driver.quit();
                 }
         }
-
 }
